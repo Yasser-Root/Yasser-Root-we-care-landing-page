@@ -23,6 +23,11 @@ function initDownloadModal() {
     triggerBtns.forEach(btn => {
         if (btn) {
             btn.addEventListener('click', (e) => {
+                const href = btn.getAttribute('href');
+                if (href && (href.startsWith('http://') || href.startsWith('https://'))) {
+                    // Allow direct link navigation to external app store
+                    return;
+                }
                 e.preventDefault();
                 openModal();
             });
