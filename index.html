@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Care - School Bus Tracking & Child Safety Application</title>
+    <meta name="description" content="We Care offers a modern solution to take care of your children on their school bus. Watch your children, track the bus in real-time, and get instant status notifications.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">
+                <div class="shield-logo-icon">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <path class="shield-bg" d="M50 5 L90 20 L90 55 C90 75 50 95 50 95 C50 95 10 75 10 55 L10 20 Z" fill="#0b2923" stroke="#3db338" stroke-width="4"/>
+                        <path d="M50 25 C40 35 30 50 35 65 C40 75 50 78 50 78 C50 78 60 75 65 65 C70 50 60 35 50 25 Z" fill="#44bb2b"/>
+                        <circle cx="50" cy="42" r="6" fill="#ffffff"/>
+                        <path d="M42 56 C42 56 46 62 50 62 C54 62 58 56 58 56" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <span class="brand-name">We Care</span>
+            </a>
+            
+            <nav class="header-nav">
+                <a href="#services">Services</a>
+                <a href="#features">Features</a>
+                <a href="#demo" class="nav-demo-btn"><i class="fa-solid fa-play"></i> Live Demo</a>
+                <button class="btn-primary-header" id="headerDownloadBtn">Download App</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-card">
+                <!-- Header logo inside hero frame like reference -->
+                <div class="hero-top-logo">
+                    <div class="shield-logo-icon large">
+                        <svg viewBox="0 0 100 100" class="logo-svg">
+                            <path class="shield-bg" d="M50 5 L90 20 L90 55 C90 75 50 95 50 95 C50 95 10 75 10 55 L10 20 Z" fill="#0b2923" stroke="#44bb2b" stroke-width="4"/>
+                            <path d="M50 25 C40 35 30 50 35 65 C40 75 50 78 50 78 C50 78 60 75 65 65 C70 50 60 35 50 25 Z" fill="#44bb2b"/>
+                            <circle cx="50" cy="42" r="6" fill="#ffffff"/>
+                            <path d="M42 56 C42 56 46 62 50 62 C54 62 58 56 58 56" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+                        </svg>
+                    </div>
+                    <span class="hero-brand-text">We Care</span>
+                </div>
+
+                <!-- Hero Image Container -->
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero.jpg" alt="Children Safe on School Bus" class="hero-img">
+                    
+                    <!-- Arabic Typography Overlay Badge -->
+                    <div class="arabic-text-overlay">
+                        <div class="arabic-line top">أطفــالــك</div>
+                        <div class="arabic-line bottom">في أمـــان</div>
+                    </div>
+                </div>
+
+                <!-- App Download Badges (ONLY Apple and Google, Huawei Removed as requested) -->
+                <div class="download-badges-wrapper">
+                    <a href="#download" class="store-badge app-store" data-store="Apple App Store">
+                        <i class="fa-brands fa-apple store-icon"></i>
+                        <div class="badge-text">
+                            <span class="small-text">Download on the</span>
+                            <span class="big-text">App Store</span>
+                        </div>
+                    </a>
+
+                    <a href="#download" class="store-badge google-play" data-store="Google Play Store">
+                        <i class="fa-brands fa-google-play store-icon"></i>
+                        <div class="badge-text">
+                            <span class="small-text">GET IT ON</span>
+                            <span class="big-text">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Intro Section -->
+        <section class="services-section" id="services">
+            <div class="container text-center">
+                <h2 class="section-subtitle">Services</h2>
+                <p class="services-intro-text">
+                    We offer completely flexible modern solution to take care of your children on their school bus with a simple application that allows you to
+                </p>
+                
+                <ul class="services-bullet-list">
+                    <li><i class="fa-solid fa-circle-check check-icon"></i> Watch your children</li>
+                    <li><i class="fa-solid fa-circle-check check-icon"></i> Track the bus</li>
+                    <li><i class="fa-solid fa-circle-check check-icon"></i> Send updated notifications about their status</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Features Showcase Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                
+                <!-- Feature 1: Watch Your Children -->
+                <div class="feature-row">
+                    <div class="feature-content fade-in-left">
+                        <h2 class="feature-title">Watch Your Children</h2>
+                        <p class="feature-tagline">Anytime , Anywhere</p>
+                        <p class="feature-subtext">With only one click .</p>
+                        
+                        <div class="feature-action-box">
+                            <button class="btn-secondary-feature" onclick="triggerWatchDemo()">
+                                <i class="fa-solid fa-eye"></i> Quick Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feature-media fade-in-right">
+                        <div class="illustration-frame">
+                            <img src="assets/feature1.jpg" alt="Watch Your Children Anytime Anywhere" class="feature-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Track Bus Movement -->
+                <div class="feature-row reverse">
+                    <div class="feature-media fade-in-left">
+                        <div class="illustration-frame">
+                            <img src="assets/feature2.jpg" alt="Track Bus Movement GPS" class="feature-img">
+                            
+                            <!-- Interactive Live Bus Badge -->
+                            <div class="live-tracker-badge" id="busTrackerBadge">
+                                <span class="pulse-dot"></span>
+                                <span id="busStatusText">Bus #24 En Route (ETA: 4 mins)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-content fade-in-right">
+                        <h2 class="feature-title">Track Bus Movement</h2>
+                        <p class="feature-description">
+                            Easily track the bus movement with a very precise GPS system .
+                        </p>
+                        
+                        <div class="feature-action-box">
+                            <button class="btn-secondary-feature" onclick="toggleBusSimulator()">
+                                <i class="fa-solid fa-location-dot"></i> Live Bus Tracking Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Notification System -->
+                <div class="feature-row">
+                    <div class="feature-content fade-in-left">
+                        <h2 class="feature-title">Notification System</h2>
+                        <p class="feature-description">
+                            Sending notifications to parents about their children status and current position .
+                        </p>
+                        
+                        <div class="feature-action-box">
+                            <button class="btn-secondary-feature" onclick="triggerNotificationDemo()">
+                                <i class="fa-solid fa-bell"></i> Send Sample Alert Notification
+                            </button>
+                        </div>
+                    </div>
+                    <div class="feature-media fade-in-right">
+                        <div class="illustration-frame">
+                            <img src="assets/feature3.jpg" alt="Parent Notification System" class="feature-img">
+                            
+                            <!-- Simulated Mobile Alert Box -->
+                            <div class="notification-toast-demo" id="demoToast">
+                                <div class="toast-header">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                    <span>We Care Alert • 09:20 AM</span>
+                                </div>
+                                <div class="toast-body">
+                                    Your child <strong>Sarah</strong> safely boarded Bus #24 at School Gate A.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Live Interactive Demo Interactive Section -->
+        <section class="demo-interactive-section" id="demo">
+            <div class="container">
+                <div class="interactive-card">
+                    <div class="card-header-badge">Interactive Dashboard Preview</div>
+                    <h3>Experience We Care Parent Portal</h3>
+                    <p>Select an action below to simulate real-time bus updates sent directly to parents.</p>
+                    
+                    <div class="interactive-controls">
+                        <button class="demo-chip active" onclick="setDemoState('pickup')"><i class="fa-solid fa-bus"></i> Morning Pickup</button>
+                        <button class="demo-chip" onclick="setDemoState('arrived')"><i class="fa-solid fa-school"></i> Arrived at School</button>
+                        <button class="demo-chip" onclick="setDemoState('dropoff')"><i class="fa-solid fa-house-user"></i> Afternoon Drop-off</button>
+                    </div>
+
+                    <div class="interactive-screen">
+                        <div class="screen-top-bar">
+                            <span class="time-clock" id="liveClock">08:15 AM</span>
+                            <span class="signal-icons"><i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+                        </div>
+                        <div class="screen-body">
+                            <div class="child-profile-pill">
+                                <div class="avatar"><i class="fa-solid fa-child-reaching"></i></div>
+                                <div class="child-info">
+                                    <span class="child-name">Adam Al-Masri</span>
+                                    <span class="child-school">Greenwood International School - Grade 3</span>
+                                </div>
+                                <span class="status-tag safe" id="childStatusBadge"><i class="fa-solid fa-shield-check"></i> Safe on Bus</span>
+                            </div>
+
+                            <div class="map-simulation-box">
+                                <div class="route-line"></div>
+                                <div class="bus-icon-animated" id="animatedBus"><i class="fa-solid fa-bus-simple"></i></div>
+                                <div class="destination-pin"><i class="fa-solid fa-location-pin"></i></div>
+                            </div>
+
+                            <div class="screen-footer-details">
+                                <div class="detail-item">
+                                    <span class="lbl">Driver</span>
+                                    <span class="val">Captain Mahmoud</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="lbl">Speed</span>
+                                    <span class="val" id="busSpeed">42 km/h</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="lbl">Est. Arrival</span>
+                                    <span class="val" id="busETA">08:24 AM (9 mins)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="footer-curved-top"></div>
+        <div class="footer-container">
+            <!-- Left Logo -->
+            <div class="footer-col footer-left">
+                <a href="#" class="footer-logo">
+                    <span class="we-care-text">We Care</span>
+                </a>
+            </div>
+
+            <!-- Center Logo & CTA -->
+            <div class="footer-col footer-center">
+                <div class="footer-shield-logo">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <path class="shield-bg" d="M50 5 L90 20 L90 55 C90 75 50 95 50 95 C50 95 10 75 10 55 L10 20 Z" fill="#0b2923" stroke="#44bb2b" stroke-width="4"/>
+                        <path d="M50 25 C40 35 30 50 35 65 C40 75 50 78 50 78 C50 78 60 75 65 65 C70 50 60 35 50 25 Z" fill="#44bb2b"/>
+                        <circle cx="50" cy="42" r="6" fill="#ffffff"/>
+                        <path d="M42 56 C42 56 46 62 50 62 C54 62 58 56 58 56" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+                    </svg>
+                </div>
+                <button class="btn-download-now" id="footerDownloadBtn">DOWNLOAD NOW</button>
+            </div>
+
+            <!-- Right Contact Us -->
+            <div class="footer-col footer-right">
+                <h4 class="contact-title">CONTACT US</h4>
+                <div class="social-icons-row">
+                    <a href="#" title="Facebook" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" title="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" title="WhatsApp" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" title="Phone" class="social-btn"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#" title="Email" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Decorative Bottom Human Figures Pattern (Exact match to PDF reference) -->
+        <div class="footer-pattern-bar">
+            <svg viewBox="0 0 1200 40" preserveAspectRatio="none" class="people-pattern-svg">
+                <defs>
+                    <pattern id="peoplePattern" width="60" height="40" patternUnits="userSpaceOnUse">
+                        <!-- Single figure holding hands unit -->
+                        <circle cx="30" cy="10" r="4.5" fill="#52b83b"/>
+                        <path d="M22 22 C22 17 25 15 30 15 C35 15 38 17 38 22 L38 34 L34 34 L34 26 L26 26 L26 34 L22 34 Z" fill="#52b83b"/>
+                        <!-- Connected arms -->
+                        <path d="M10 20 L22 20 M38 20 L50 20" stroke="#52b83b" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="0" cy="10" r="4.5" fill="#52b83b"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="40" fill="url(#peoplePattern)"/>
+            </svg>
+        </div>
+    </footer>
+
+    <!-- Download Options Modal -->
+    <div class="modal-overlay" id="downloadModal">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="closeModalBtn">&times;</button>
+            <div class="modal-header">
+                <div class="shield-logo-icon medium">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <path class="shield-bg" d="M50 5 L90 20 L90 55 C90 75 50 95 50 95 C50 95 10 75 10 55 L10 20 Z" fill="#0b2923" stroke="#44bb2b" stroke-width="4"/>
+                        <path d="M50 25 C40 35 30 50 35 65 C40 75 50 78 50 78 C50 78 60 75 65 65 C70 50 60 35 50 25 Z" fill="#44bb2b"/>
+                        <circle cx="50" cy="42" r="6" fill="#ffffff"/>
+                    </svg>
+                </div>
+                <h3>Download We Care Application</h3>
+                <p>Choose your platform to install the app on your mobile device</p>
+            </div>
+
+            <div class="modal-stores-grid">
+                <!-- Apple Store -->
+                <a href="https://apps.apple.com" target="_blank" class="modal-store-item">
+                    <i class="fa-brands fa-apple"></i>
+                    <div>
+                        <span class="sub">Available on</span>
+                        <span class="main">Apple App Store</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+
+                <!-- Google Play -->
+                <a href="https://play.google.com" target="_blank" class="modal-store-item">
+                    <i class="fa-brands fa-google-play"></i>
+                    <div>
+                        <span class="sub">Available on</span>
+                        <span class="main">Google Play Store</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right arrow"></i>
+                </a>
+            </div>
+
+            <div class="qr-code-section">
+                <div class="qr-box">
+                    <svg viewBox="0 0 100 100" width="90" height="90">
+                        <rect width="100" height="100" fill="#ffffff"/>
+                        <path d="M10 10 h30 v30 h-30 z M15 15 v20 h20 v-20 z M22 22 h6 v6 h-6 z" fill="#000"/>
+                        <path d="M60 10 h30 v30 h-30 z M65 15 v20 h20 v-20 z M72 22 h6 v6 h-6 z" fill="#000"/>
+                        <path d="M10 60 h30 v30 h-30 z M15 65 v20 h20 v-20 z M22 72 h6 v6 h-6 z" fill="#000"/>
+                        <path d="M50 50 h10 v10 h-10 z M65 50 h25 v10 h-25 z M50 65 h15 v25 h-15 z M70 70 h20 v20 h-20 z" fill="#000"/>
+                    </svg>
+                </div>
+                <p>Scan with your mobile camera for instant download link</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>

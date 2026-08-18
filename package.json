@@ -1,0 +1,9 @@
+{
+  "name": "we-care-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "We Care School Bus Tracking App Landing Page",
+  "scripts": {
+    "build": "echo 'Static build ready'"
+  }
+}
